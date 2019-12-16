@@ -88,4 +88,37 @@ function duplicate(string) {
   return sortedResult;
 }
 
-console.log(duplicate('google all that you think can think of'));
+// console.log(duplicate('google all that you think can think of'));
+
+
+function palindrome(string) {
+  let hashMap = new HashMap();
+  let odd = 0;
+  let hashMapValue= null;
+  for (let i = 0; i < string.length; i++) {
+    try {
+      hashMapValue = hashMap.get(string[i]);
+    }
+    catch (err) {
+      hashMapValue = null;
+    }
+    if (!hashMapValue) {
+      hashMap.set(string[i], 1);
+      odd++;
+    }
+    else if (hashMapValue.value % 2 === 0) {
+      hashMap.set(string[i], hashMapValue.value++);
+      odd++;
+    }
+    else {
+      hashMap.set(string[i], hashMapValue.value++);
+      odd--;
+    }
+  }
+  if (odd <= 1) {
+    return true;
+  }
+  return false;
+}
+
+console.log(palindrome('acecarr'));
