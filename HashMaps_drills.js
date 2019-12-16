@@ -19,10 +19,10 @@ function main() {
 		});
 	}
 
-	console.log(lotr);
-	lotr._hashTable.forEach(index => console.log(index));
+	//console.log(lotr);
+	//lotr._hashTable.forEach(index => console.log(index));
 
-
+	console.log(lotr._hashTable[6].value.head);
 
 	// What are the values of Maiar and Hobbit that you have? Is there a discrepancy? Explain your answer.
 	// key of Maiar = Sauron
@@ -33,7 +33,7 @@ function main() {
 
 
 
-	WhatDoesThisDo();
+	//WhatDoesThisDo();
 
 	// Because of the aforementioned property of HashMaps because the Key is not different the values are being overwritten. 
 
@@ -58,7 +58,7 @@ const WhatDoesThisDo = function () {
 	console.log(map2.get(str3));
 };
 
-// main();
+main();
 
 
 //number 3
@@ -167,13 +167,13 @@ function anagram(arr) {
 
 
 
-let input = ['east', 'cars', 'acre', 'arcs', 'teas', 'eats', 'race'];
-console.log(anagram(input));
+// let input = ['east', 'cars', 'acre', 'arcs', 'teas', 'eats', 'race'];
+// console.log(anagram(input));
 
 
-var fs = require('fs');
-const words = fs.readFileSync('/usr/share/dict/words', 'utf-8').split('\n');
-const anagrams = anagram(words);
-for (let group of anagrams)
-	if (group.length > 8)
-		console.log(group.length, group.join(' '));
+// var fs = require('fs');
+// const words = fs.readFileSync('/usr/share/dict/words', 'utf-8').split('\n');
+// const anagrams = anagram(words);
+// for (let group of anagrams)
+// 	if (group.length > 8)
+// 		console.log(group.length, group.join(' '));
